@@ -1,0 +1,13 @@
+.stardb-list {
+  margin: 50px;
+  display: flex;
+}
+
+.list-group-item.list-group-item-action.active {
+  background-color: #0052296e;
+  border-color: #0052296e;
+}
+
+.list-group-item.list-group-item-action.active:hover {
+  background-color: rgba(136, 136, 136, 0.24);
+}

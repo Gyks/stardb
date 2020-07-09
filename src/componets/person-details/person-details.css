@@ -1,0 +1,28 @@
+.person-container {
+  background-color: #222;
+  border: 1px solid #282828;
+  padding: 1rem;
+  display: flex;
+  border-radius: 5px;
+  margin: 50px;
+}
+
+.person-container .person-image {
+  background-color: darkgreen;
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+}
+
+.person-container .person-name {
+  font-size: 1.75em;
+}
+
+.person-container .person-info {
+  font-size: 1.25em;
+  margin-left: 15px;
+}
+
+.person-container .person-text {
+  border-bottom: 1px solid darkgray;
+}

@@ -11,3 +11,7 @@
 .list-group-item.list-group-item-action.active:hover {
   background-color: rgba(136, 136, 136, 0.24);
 }
+
+.list-group-item.list-group-item-action {
+  cursor: pointer;
+}

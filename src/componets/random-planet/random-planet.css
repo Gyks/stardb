@@ -11,7 +11,6 @@
   width: 200px;
   height: 200px;
   border-radius: 25px;
-  background-color: red;
 }
 
 .random-planet-container .planet-name {
@@ -25,4 +24,17 @@
 
 .random-planet-container .planet-info .planet-text {
   border-bottom: 1px solid darkgray;
+}
+
+@media (max-width: 660px) {
+  .random-planet-container .planet-name {
+    font-size: 2em;
+    overflow: hidden;
+  }
+
+  .random-planet-container .planet-info {
+    font-size: 1em;
+    margin-left: 25px;
+    overflow: hidden;
+  }
 }

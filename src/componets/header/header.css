@@ -7,9 +7,15 @@
 
 .nav-item:hover {
   background-color: #0052296e;
+  cursor: pointer;
 }
 
 .nav-brand {
   float: left;
   font-size: 2.75em;
+  cursor: default;
+}
+
+.navbar.bg-dark {
+  border: none;
 }

@@ -11,13 +11,15 @@ export default class App extends React.Component {
     return (
       <div>
         <Header />
-        <RandomPlanet />
-        <div className="row mb2">
-          <div className="col-md-4">
-            <ItemList />
-          </div>
-          <div className="col-md-8">
-            <PersonDetails />
+        <div className="container-fluid">
+          <RandomPlanet />
+          <div className="row mb-2">
+            <div className="col-md-4">
+              <ItemList />
+            </div>
+            <div className="col-md-8">
+              <PersonDetails />
+            </div>
           </div>
         </div>
       </div>

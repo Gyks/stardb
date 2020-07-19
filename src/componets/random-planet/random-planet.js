@@ -26,7 +26,7 @@ export default class RandomPlanet extends React.Component {
   };
 
   updatePlanet() {
-    const id = Math.floor(Math.random() * 18) + 2;
+    const id = Math.floor(Math.random() * 25);
     this.swapi.getPlanet(id).then(this.onPlanetLoaded).catch(this.onError);
   }
 

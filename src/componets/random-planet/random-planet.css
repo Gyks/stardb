@@ -31,6 +31,11 @@
     font-size: 2em;
     overflow: hidden;
   }
+  .random-planet-container .planet-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 25px;
+  }
 
   .random-planet-container .planet-info {
     font-size: 1em;

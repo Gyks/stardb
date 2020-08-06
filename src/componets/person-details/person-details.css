@@ -8,9 +8,9 @@
 }
 
 .person-container .person-image {
-  background-color: darkgreen;
   width: 150px;
-  height: 150px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 25px;
 }
 
@@ -25,4 +25,13 @@
 
 .person-container .person-text {
   border-bottom: 1px solid darkgray;
+}
+
+@media (max-width: 450px) {
+  .person-container .person-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
 }

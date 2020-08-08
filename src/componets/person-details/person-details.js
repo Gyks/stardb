@@ -9,16 +9,16 @@ export default class PersonDetails extends React.Component {
     person: null,
   };
 
-  componentDidMount() {
-    this.updatePerson();
-  }
-
   updatePerson() {
     const { personId } = this.props;
     if (!personId) return;
     this.swapi.getPerson(personId).then((person) => {
       this.setState({ person: person });
     });
+  }
+
+  componentDidMount() {
+    this.updatePerson();
   }
 
   componentDidUpdate(prevProps) {

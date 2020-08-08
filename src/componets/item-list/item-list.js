@@ -14,13 +14,16 @@ export default class ItemList extends React.Component {
   }
 
   renderListItems = (items) => {
-    let style = "list-group-item list-group-item-action";
+    let defaultStyle = "list-group-item list-group-item-action";
     return items.map((item, idx) => {
+      let style = defaultStyle;
       if (idx === this.state.itemActive) {
-        style = "list-group-item list-group-item-action active";
+        style += " active";
       } else {
-        style = "list-group-item list-group-item-action";
+        style = defaultStyle;
       }
+
+      const label = this.props.children(item);
       return (
         <li
           key={item.id}
@@ -30,7 +33,7 @@ export default class ItemList extends React.Component {
           }}
           className={style}
         >
-          {item.name}
+          {label}
         </li>
       );
     });

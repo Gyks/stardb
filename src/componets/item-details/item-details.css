@@ -1,4 +1,4 @@
-.person-container {
+.item-container {
   background-color: #222;
   border: 1px solid #282828;
   padding: 1rem;
@@ -7,28 +7,28 @@
   margin: 50px;
 }
 
-.person-container .person-image {
+.item-container .item-image {
   width: 150px;
   height: 250px;
   object-fit: cover;
   border-radius: 25px;
 }
 
-.person-container .person-name {
+.item-container .item-name {
   font-size: 1.75em;
 }
 
-.person-container .person-info {
+.item-container .item-info {
   font-size: 1.25em;
   margin-left: 15px;
 }
 
-.person-container .person-text {
+.item-container .item-text {
   border-bottom: 1px solid darkgray;
 }
 
 @media (max-width: 450px) {
-  .person-container .person-image {
+  .item-container .item-image {
     width: 50px;
     height: 50px;
     object-fit: cover;

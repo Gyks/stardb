@@ -1,9 +1,21 @@
 import React, { Component } from "react";
 import "./people-page.css";
 import ItemList from "../item-list";
-import PersonDetails from "../person-details";
 import Row from "../row";
 import SwapiService from "../../services/swapi";
+import ItemDetails, { Record } from "../item-details";
+
+class ErrorBoundary extends Component {
+  state = {
+    hasError: false,
+  };
+
+  componentDidCatch() {}
+  render() {
+    if (this.state.hasError) return <p>Error</p>;
+    return this.props.children;
+  }
+}
 
 export default class PeoplePage extends Component {
   swapi = new SwapiService();
@@ -28,9 +40,27 @@ export default class PeoplePage extends Component {
       </ItemList>
     );
     const personDetails = (
-      <PersonDetails personId={this.state.selectedPerson} />
+      <ItemDetails
+        getData={this.swapi.getPerson}
+        onItemSelected={this.onPersonSelected}
+        itemId={this.state.selectedPerson}
+        getImageUrl={(id) => {
+          return `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
+        }}
+      >
+        <Record field="name" label="Name" />
+        <Record field="gender" label="Gender" />
+        <Record field="mass" label="Mass" />
+        <Record field="height" label="Height" />
+        <Record field="birthDate" label="Birth Date" />
+        <Record field="hairColor" label="Hair Color" />
+      </ItemDetails>
     );
 
-    return <Row left={peopleList} right={personDetails} />;
+    return (
+      <ErrorBoundary>
+        <Row left={peopleList} right={personDetails} />
+      </ErrorBoundary>
+    );
   }
 }

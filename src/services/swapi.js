@@ -71,7 +71,7 @@ export default class SwapiService {
       starshipClass: starship.starship_class,
       costInCredits: starship.cost_in_credits,
       crew: starship.crew,
-      // ...
+      name: starship.name,
     };
   };
 }
